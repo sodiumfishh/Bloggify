@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2.3rem 0;
+}
+
+header h1 {
+    color: #777;
+    font-size: 2.5rem;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+header li a {
+    font-size: 1.3rem;
+    color: #777;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 15px;
+    background: #131313;
+    color: #fff;
+    margin-top: 3.7rem;
+}
+
+/* Main */
+.main {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.main h2 {
+    font-size: 2.1rem;
+}
+
+/* Create Blogs */
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 700px;
+    margin: auto;
+}
+
+form input, form textarea{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 1.1rem;
+}
+
+.btn {
+    padding: 1rem 1.3rem;
+    border: none;
+    background: rgb(9, 151, 187);
+    color: #fff;
+    width: 230px;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+/* Blogs */
+.flex-container {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+.content h1 {
+    margin-bottom: 0.4rem;
+    font-size: 2.3rem;
+}
+
+.content p {
+    font-size: 1.3rem;
+}
+
+.delete-blog-btn {
+    padding: 1rem;
+}
+
+.delete-blog-btn:hover {
+    color: rgb(233, 27, 27);
+    cursor: pointer;
+}
+
+.delete-blog-btn .fa-trash {
+    font-size: 1.3rem;
+}

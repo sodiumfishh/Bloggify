@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %> 
+<body>
+    <div class="container">
+        <%- include("./partials/header.ejs") %> 
+        <h2 style="text-align: center; font-size: 2.1rem; color: #777; margin-bottom: 1rem;">Create Blog</h2>
+        <form action="/blogs" method="POST">
+            <input type="text" name="title" placeholder="Enter title..." class="blog-title">
+            <textarea name="snippet" cols="80" rows="10" placeholder="Enter body..." class="blog-body"></textarea>
+            <button class="btn">Create</button>            
+        </form>
+    </div>
+    <%- include("./partials/footer.ejs") %> 
+</body>
+</html>
