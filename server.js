@@ -47,7 +47,7 @@ app.delete("/blogs/:id", (req, res) => {
         })
 })
 
-app.listen(process.env.port, () => {
+app.listen(process.env.PORT, () => {
     mongoose.connect(process.env.dbURI, { useNewUrlParser:true, useUnifiedTopology:true })
     const db = mongoose.connection
     db.on("error", err => {console.log(err)})
