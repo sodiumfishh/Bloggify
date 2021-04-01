@@ -1,12 +1,13 @@
+if(process.env.NODE_ENV !== "production") {
+    require("dotenv").config()
+}
+
 const express = require("express")
 const app = express()
 const mongoose = require("mongoose")
 
 //Models
 const Blog = require("./models/Blog")
-
-//Database URI
-const dbURI = "mongodb+srv://samin:samin@cluster0.8dlg5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 
 app.set("view engine", "ejs")
 
@@ -46,8 +47,8 @@ app.delete("/blogs/:id", (req, res) => {
         })
 })
 
-app.listen(3000, () => {
-    mongoose.connect(dbURI, { useNewUrlParser:true, useUnifiedTopology:true })
+app.listen(process.env.port, () => {
+    mongoose.connect(process.env.dbURI, { useNewUrlParser:true, useUnifiedTopology:true })
     const db = mongoose.connection
     db.on("error", err => {console.log(err)})
     db.once("open", () => {console.log("Connected to database")})
